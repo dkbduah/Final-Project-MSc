@@ -1,0 +1,23 @@
+2026-03-24 12:42:56 [INFO    ] Connected to backend http://localhost:8000 — {'status': 'healthy', 'service': 'SEAS Backend', 'version': '1.0.0'} (93 ms)
+2026-03-24 12:42:56 [INFO    ] Election loaded: id=1 stations=50 keys=50
+2026-03-24 12:42:57 [INFO    ] [VULNERABLE] Random Signature Injection                     HTTP 409  22 ms  HTTP 409 | rejected=None | reason=
+2026-03-24 12:42:59 [INFO    ] [VULNERABLE] Cross-Station Key Confusion                    HTTP 409  22 ms  HTTP 409 | rejected=None
+2026-03-24 12:43:01 [INFO    ] [VULNERABLE] Post-Sign Ciphertext Tampering                 HTTP 409  77 ms  HTTP 409 | ciphertext +1 tamper | rejected=None
+2026-03-24 12:43:02 [INFO    ] [VULNERABLE] Empty Signature Bypass                         HTTP 409  17 ms  HTTP 409 | rejected=?
+2026-03-24 12:43:04 [INFO    ] [ERROR] Exact Replay Attack                            HTTP 409  28 ms  First submission failed (HTTP 409) — cannot run replay test.
+2026-03-24 12:43:05 [WARNING ] Skipping test 'Re-signed Replay' — no eligible station with key available.
+2026-03-24 12:43:05 [INFO    ] [ERROR] Re-signed Replay                               HTTP -    0 ms  Skipped — no unused station with known key available.
+2026-03-24 12:43:07 [INFO    ] [DEFENDED] Ghost Station Injection                        HTTP 404  13 ms  HTTP 404 | detail=Polling station not found.
+2026-03-24 12:43:09 [INFO    ] [DEFENDED] Extra Candidate Code Injection                 HTTP 409  18 ms  HTTP 409
+2026-03-24 12:43:09 [INFO    ] [VULNERABLE] Malformed Ciphertext Injection                 HTTP 409  71 ms  HTTP 409
+2026-03-24 12:43:10 [INFO    ] [DEFENDED] Negative Vote Encoding                         HTTP 409  26 ms  HTTP 409 | The backend cannot inspect ciphertext plaintext.
+2026-03-24 12:43:18 [WARNING ] Skipping test 'Homomorphic Arithmetic Verification' — no eligible station with key available.
+2026-03-24 12:43:18 [INFO    ] [ERROR] Homomorphic Arithmetic Verification            HTTP -    0 ms  Skipped — no unused station with known key available.
+2026-03-24 12:43:18 [INFO    ] [DEFENDED] Audit Hash Chain Integrity                     HTTP 200  17 ms  valid=True | entries=9 | first_broken=None
+2026-03-24 12:43:18 [INFO    ] [DEFENDED] Rejected Submission Audit Coverage             HTTP 200  14 ms  4 SUBMISSION_REJECTED event(s) found in audit log
+2026-03-24 12:43:21 [INFO    ] [DEFENDED] Signature Verification Timing Oracle           HTTP 201  33 ms  valid=37.9ms | invalid=32.9ms | diff=5.1ms | Ratio 1.15× — timing difference negligible
+2026-03-24 12:43:21 [INFO    ] [DEFENDED] Paillier Private Key Exposure                  HTTP 200  14 ms  private key in response = False
+2026-03-24 12:43:21 [INFO    ] [DEFENDED] Officer Private Key Exposure (Station List)    HTTP 200  13 ms  private keys in listing = False
+2026-03-24 12:43:22 [INFO    ] [DEFENDED] Rejected Submission Forensic Retention         HTTP 200  12 ms  Rejected submissions in DB = 4
+2026-03-24 12:43:22 [INFO    ] Report complete | score=52% defended=9 vulnerable=5 warnings=0 errors=3
+2026-03-24 12:43:22 [INFO    ] JSON report saved to report.json
